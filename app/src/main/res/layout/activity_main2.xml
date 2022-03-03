@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:id="@+id/information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:background="#8F76FD00"
+        android:text="    مشاهده اطلاعات ثبت شده "
+        android:textColor="#66BB6A"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/codeNational"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="#8FBBBDB9"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="8dp"
+        android:text=" "
+        app:layout_constraintEnd_toEndOf="@+id/information"
+        app:layout_constraintStart_toStartOf="@+id/information"
+        app:layout_constraintTop_toBottomOf="@+id/information"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/birthPlace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="#8FBBBDB9"
+        android:ems="10"
+        android:inputType="number"
+        android:padding="8dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/codeNational"
+        app:layout_constraintStart_toStartOf="@+id/codeNational"
+        app:layout_constraintTop_toBottomOf="@+id/codeNational"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/homeAdress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="#8FBBBDB9"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="8dp"
+        android:text=" "
+        app:layout_constraintEnd_toEndOf="@+id/birthPlace"
+        app:layout_constraintStart_toStartOf="@+id/birthPlace"
+        app:layout_constraintTop_toBottomOf="@+id/birthPlace"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/codePostal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="#8FBBBDB9"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="8dp"
+        android:text=" "
+        app:layout_constraintEnd_toEndOf="@+id/homeAdress"
+        app:layout_constraintStart_toStartOf="@+id/homeAdress"
+        app:layout_constraintTop_toBottomOf="@+id/homeAdress"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="#8FBBBDB9"
+        android:ems="10"
+        android:inputType="number"
+        android:padding="8dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/codePostal"
+        app:layout_constraintStart_toStartOf="@+id/codePostal"
+        app:layout_constraintTop_toBottomOf="@+id/codePostal"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/editInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#F06292"
+        android:text="تغییر اطلاعات "
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gender" />
+</androidx.constraintlayout.widget.ConstraintLayout>

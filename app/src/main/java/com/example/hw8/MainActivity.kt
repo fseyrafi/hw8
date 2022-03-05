@@ -13,15 +13,11 @@ import com.example.hw8.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    lateinit var NationalCodeET: EditText
+    private var MY_SHARED_PREF_NAME = "my_shared_pref"
     private var codNational = ""
-    lateinit var placeOfBirthET: EditText
     private var codPostal = ""
-    lateinit var fullNameET: EditText
     private var name = ""
-    lateinit var postalCodeET : EditText
     private var place = ""
-    lateinit var addressET : EditText
     private var drs = ""
 
 
@@ -33,16 +29,33 @@ class MainActivity : AppCompatActivity() {
 
         binding.button.setOnClickListener {
 
-//            val codNational = NationalCodeET.text.toString()
-//            val codPostal = placeOfBirthET.text.toString()
-//            val place = postalCodeET.text.toString()
-//            val drs = addressET.text.toString()
-//
+            val codNational = binding.NationalCodeET.text.toString().trim { it <= ' ' }
+            val sharedPref = getSharedPreferences("myKey", MODE_PRIVATE)
+            val editor = sharedPref.edit()
+            editor.putString("value", codNational)
+            editor.apply()
+
+            val codPostal = binding.postalCodeET.text.toString().trim { it <= ' ' }
+            editor.putString("value1", codPostal)
+            editor.apply()
+
+            val place = binding.placeOfBirthET.text.toString().trim { it <= ' ' }
+            editor.putString("value2", place)
+            editor.apply()
+
+            val address = binding.addressET.text.toString().trim { it <= ' ' }
+            editor.putString("value3", address)
+            editor.apply()
+
+            val gender2 = binding.radioButton.text.toString().trim { it <= ' ' }
+            editor.putString("value4", gender2)
+            editor.apply()
+
+            val gender1 = binding.radioButton2.text.toString().trim { it <= ' ' }
+            editor.putString("value5", gender1)
+            editor.apply()
+
             val intent = Intent (MainActivity@this , MainActivity2 :: class.java)
-//            intent.putExtra("NationalCode", codNational)
-//            intent.putExtra("postalCode", codPostal)
-//            intent.putExtra("placeOfBirth", place)
-//            intent.putExtra("address", drs)
             startActivity(intent)
 
 
@@ -95,4 +108,3 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-//https://www.youtube.com/watch?v=uNV_qLfc5Zw

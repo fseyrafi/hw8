@@ -22,95 +22,132 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TextContrastCheck" />
 
-    <EditText
-        android:id="@+id/fullName_ET"
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:hint="نام و نام خانوادگی "
-        android:background="@drawable/border"
-        android:inputType="textPersonName"
-        android:padding="8dp"
-        android:textColorHighlight="#F06292"
         app:layout_constraintEnd_toEndOf="@+id/informationTv"
         app:layout_constraintStart_toStartOf="@+id/informationTv"
-        app:layout_constraintTop_toBottomOf="@+id/informationTv"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/informationTv">
 
-    <EditText
-        android:id="@+id/NationalCode_ET"
+        <EditText
+            android:id="@+id/fullName_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:hint="نام و نام خانوادگی "
+            android:inputType="textPersonName"
+            android:padding="8dp"
+            android:textColorHighlight="#F06292"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nationalET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/border"
-        android:ems="10"
-        android:hint="کد ملی "
-        android:inputType="number"
-        android:padding="8dp"
-        android:textColorHighlight="#F06292"
-        app:layout_constraintEnd_toEndOf="@+id/fullName_ET"
-        app:layout_constraintStart_toStartOf="@+id/fullName_ET"
-        app:layout_constraintTop_toBottomOf="@+id/fullName_ET"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintEnd_toEndOf="@+id/nameET"
+        app:layout_constraintStart_toStartOf="@+id/nameET"
+        app:layout_constraintTop_toBottomOf="@+id/nameET">
 
-    <EditText
-        android:id="@+id/placeOfBirth_ET"
+        <EditText
+            android:id="@+id/NationalCode_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:hint="کد ملی "
+            android:inputType="number"
+            android:padding="8dp"
+            android:textColorHighlight="#F06292"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/placeET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/border"
-        android:ems="10"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="12dp"
-        android:hint="محل تولد "
-        android:inputType="textPersonName"
-        android:padding="8dp"
-        android:textColorHighlight="#F06292"
-        app:layout_constraintEnd_toEndOf="@+id/NationalCode_ET"
-        app:layout_constraintStart_toStartOf="@+id/NationalCode_ET"
-        app:layout_constraintTop_toBottomOf="@+id/NationalCode_ET"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintEnd_toEndOf="@+id/nationalET"
+        app:layout_constraintStart_toStartOf="@+id/nationalET"
+        app:layout_constraintTop_toBottomOf="@+id/nationalET">
 
-    <EditText
-        android:id="@+id/postalCode_ET"
+        <EditText
+            android:id="@+id/placeOfBirth_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:hint="محل تولد "
+            android:inputType="textPersonName"
+            android:padding="8dp"
+            android:textColorHighlight="#F06292"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/postalET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/border"
-        android:ems="10"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="12dp"
-        android:hint="کد پستی  "
-        android:inputType="number"
-        android:padding="8dp"
-        android:textColorHighlight="#F06292"
-        app:layout_constraintEnd_toEndOf="@+id/address_ET"
-        app:layout_constraintStart_toStartOf="@+id/address_ET"
-        app:layout_constraintTop_toBottomOf="@+id/address_ET"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintEnd_toEndOf="@+id/adrsET"
+        app:layout_constraintStart_toStartOf="@+id/adrsET"
+        app:layout_constraintTop_toBottomOf="@+id/adrsET">
 
-    <EditText
-        android:id="@+id/address_ET"
+        <EditText
+            android:id="@+id/postalCode_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:hint="کد پستی  "
+            android:inputType="number"
+            android:padding="8dp"
+            android:textColorHighlight="#F06292"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/adrsET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/border"
-        android:ems="10"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="12dp"
-        android:hint="آدرس "
-        android:inputType="textPersonName"
-        android:padding="8dp"
-        android:textColorHighlight="#F06292"
-        app:layout_constraintEnd_toEndOf="@+id/placeOfBirth_ET"
-        app:layout_constraintStart_toStartOf="@+id/placeOfBirth_ET"
-        app:layout_constraintTop_toBottomOf="@+id/placeOfBirth_ET"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintEnd_toEndOf="@+id/placeET"
+        app:layout_constraintStart_toStartOf="@+id/placeET"
+        app:layout_constraintTop_toBottomOf="@+id/placeET">
+
+        <EditText
+            android:id="@+id/address_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:hint="آدرس "
+            android:inputType="textPersonName"
+            android:padding="8dp"
+            android:textColorHighlight="#F06292"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <TextView
         android:id="@+id/textView2"
@@ -119,8 +156,8 @@
         android:layout_marginTop="12dp"
         android:text="جنسیت"
         android:textSize="18dp"
-        app:layout_constraintEnd_toEndOf="@+id/postalCode_ET"
-        app:layout_constraintTop_toBottomOf="@+id/postalCode_ET" />
+        app:layout_constraintEnd_toEndOf="@+id/postalET"
+        app:layout_constraintTop_toBottomOf="@+id/postalET" />
 
     <RadioButton
         android:id="@+id/radioButton"
@@ -157,6 +194,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/postalCode_ET" />
+        app:layout_constraintTop_toBottomOf="@+id/postalET" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
